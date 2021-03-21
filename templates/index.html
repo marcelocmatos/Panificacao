@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+
+<html lang="pt-br" >
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../static/css/reset.css">   
+    <link rel="stylesheet" href="../static/css/index.css">
+
+    <title>Página para Cáculo de Fermentação Natural</title>
+</head>
+<body>
+    <header class="cabecalho">
+        Vamos fermentar?
+    </header>
+
+    <main class="principal">
+        <div>
+            <p>Preencha as informações abaixo</p><br><br>
+            <form method="post" action="/" class="formulario">
+                <section>
+                    Nome:<br><br>
+                    <input type="text" name="nome"><br><br>
+                </section>
+
+                <section>
+                        Tipo do Fermento:<br>
+                        ⁕123: 1 parte de fermento, 2 de água e 3 de farinha.<br>
+                        ⁕122: 1 parte de fermento, 2 de água e 2 de farinha.<br>
+                        ⁕Digite o número de qual tipo de alimentação do fermento você quer:<br>
+                        ⁕1 para tipo 123<br>
+                        ⁕2 para tipo 122<br>
+                        <br>
+                        <br>
+                        <input type="text" name="tipo_fermento"><br><br>
+                </section>
+
+                <section>
+                    Peso do fermento final em gramas:<br>
+                    <input type="text" name="peso_fermento"><br><br>
+                </section>
+
+                <button type="submit" value="Submit" class="enviar">Enviar</button>
+
+            </form>
+        </div>
+
+        <div class="retorno">
+            {% if nome %}
+                <p>{{nome}}, o cálculo para o fermento é {{fermento}}</p>
+            {% endif %}
+
+        </div>
+
+    </main>
+
+</body>
+</html>
